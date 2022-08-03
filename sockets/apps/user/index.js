@@ -13,6 +13,7 @@ const Redis = require("ioredis");
 */
 
 module.exports = (io) => {
+  
   const UserNamespace = io.of("/users");
 
   const sub = new Redis();

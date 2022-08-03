@@ -95,7 +95,7 @@ class UsersController extends require("../Controller") {
    *
    */
   async store(req, res, next, user = new User) {
-
+    
 
     user.firstByEmail(req.body.email)
     

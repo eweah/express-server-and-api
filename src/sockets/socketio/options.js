@@ -3,7 +3,7 @@ const ENV = require("../../config/.env")();
 
 /*
 |--------------------------------------------------------------------------
-| Socket.io Server Class Contrutor Options Object
+| Socket.io Server Class Constructor Options Object
 |--------------------------------------------------------------------------
 |
 | 

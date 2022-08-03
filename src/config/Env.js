@@ -37,7 +37,7 @@ class Env extends require("../Base") {
    * @function
    *
    *
-   * @description add customed environmental objects to NodeJs global process.env object
+   * @description add custom environmental objects to NodeJs global process.env object
    *
    * @return does not return anything
    *

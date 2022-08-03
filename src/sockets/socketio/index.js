@@ -14,5 +14,4 @@
 const sio_redis = require("socket.io-redis");
 const SocketIo = require("./SocketIo");
 
-module.exports = (server) =>
-  new SocketIo(server).adapter(sio_redis({ host: "localhost", port: 6379 }));
+module.exports = (server) => new SocketIo(server).adapter(sio_redis({ host: "localhost", port: 6379 }));

@@ -10,7 +10,7 @@ const {renderFile} = require('ejs')
 
 require("./src/config/Env");
 
-const port = 8080 | process.env.PORT || process.env.SERVER_PORT;
+const port = 8000 | process.env.PORT || process.env.SERVER_PORT;
 
 const num_processes = require("os").cpus().length;
 
@@ -67,14 +67,15 @@ if (cluster.isMaster) {
   app.use(express.json());
   app.use(morgan("dev"));
 
-  app.use(express.static('public'));
-  app.engine('html', renderFile);
-  app.set('view engine', 'html');
-  app.set('views', path.join(__dirname, './views'));
+  // uncomment if you want to use views
+  // app.use(express.static('public'));
+  // app.engine('html', renderFile);
+  // app.set('view engine', 'html');
+  // app.set('views', path.join(__dirname, './views'));
 
 
   const corsOptions = {
-    origin: 'http://localhost:8000',
+    origin: 'http://localhost:3000',
     credentials: process.env.SOCKETIO_CLIENT_CORS_CREDENTIALS,
     "access-control-allow-credentials": true,
     withCredentials: true, 
@@ -83,6 +84,7 @@ if (cluster.isMaster) {
   };
 
   app.use(cors(corsOptions));
+  
   const routes = require("./routes");
   // Mount Web Routes (HTTP routes to main app)
   app.use(routes);
