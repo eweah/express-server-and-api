@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * @author Ericson S. Weah  <ericson.weah@ericsonweah.dev> <https://github.com/ericsonsweah>  <+1.385.436.1984>
+ * @author Ericson S. Weah  <ericson.weah@gmail.com> <https://github.com/eweah>  <+1.801.671.7159>
  *
  * @module TCPController
  * @kind class

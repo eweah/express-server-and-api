@@ -21,7 +21,7 @@ class AuthController extends require("../Controller") {
     });
     // autobinds class methods
     this.autobind(AuthController);
-    // set maximum listener to infinitiy
+    // set maximum listener to infinity
     this.setMaxListeners(Infinity);
   }
 
@@ -30,10 +30,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description get all documents from a collection and or all network objects from a network and  emits event related to that data
    *
@@ -56,10 +56,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description get all documents from a collection and or all network objects from a network and  emits event related to that data
    *
@@ -84,10 +84,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description get all documents from a collection and or all network objects from a network and  emits event related to that data
    *
@@ -112,10 +112,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description get all documents from a collection and or all network objects from a network and  emits event related to that data
    *
@@ -139,10 +139,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description get all documents from a collection and or all network objects from a network and  emits event related to that data
    *
@@ -157,10 +157,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description store one or more document in a collection or sends one or more network object to one or more networks and emits event related to the data
    *
@@ -184,10 +184,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description gets a document from a collection or a network object from a network and emits event related to that data
    *
@@ -202,10 +202,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description edits a document from a collection or a network object from a network and emits event related to that data
    *
@@ -220,10 +220,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description updates a document a collection or a network object from a network and emits event related to that data
    *
@@ -247,10 +247,10 @@ class AuthController extends require("../Controller") {
    * @function
    *
    * @param {Object|Function|EventEmitter|Stream} io is the fundamental Socket.io Server class instance for emitting event data, broadcasting, etc ...
-   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Scoket.io Server Socket class instance for interacting with browser clients
+   * @param {Object|Function|EventEmitter|Stream} socket socket is the fundamental Socket.io Server Socket class instance for interacting with browser clients
    * @param {Object|Function|EventEmitter|Stream} sub an instance of Redis (io-redis) for subscription
    * @param {Object|Function|EventEmitter|Stream} pub an instance of Redis (io-redis) for publishing
-   * @param {Array} args an optional array of middlewares
+   * @param {Array} args an optional array of middleware
    *
    * @description deletes or removes a document a collection or a network object from a network and emits event related to that data
    *

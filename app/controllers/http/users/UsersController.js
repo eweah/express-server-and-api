@@ -76,7 +76,7 @@ class UsersController extends require("../Controller") {
        user.once('updateOne', updated => res.status(200).send(updated))
        user.once('updateOne-error', error => res.status(200).send(error))
      }else{
-       return res.status(200).send({erorr:'Inactive Account Found. Please Activate your account by finding the activation link we emailed you!'});
+       return res.status(200).send({error:'Inactive Account Found. Please Activate your account by finding the activation link we emailed you!'});
      }
   }
 

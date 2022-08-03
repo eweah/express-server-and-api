@@ -376,7 +376,7 @@ class CallbackQueryValidator extends require("../../../Base") {
    * @name validateCollectionOne
    * @function
    *
-   * @param {String} as mongodb database collection qvalidateCollectionOne name
+   * @param {String} as mongodb database collection validateCollectionOne name
    * @param {String} event EventEmitter event name
    *
    * @description Checks/validates input query

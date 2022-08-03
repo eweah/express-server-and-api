@@ -1,6 +1,6 @@
 "use strict";
 /**
- * @author Ericson S. Weah  <ericson.weah@ericsonweah.dev> <https://github.com/eweah>  <+1.801.671.7159>
+ * @author Ericson S. Weah  <ericson.weah@gmail.coom> <https://github.com/eweah>  <+1.801.671.7159>
  *
  * @module Base
  * @kind class

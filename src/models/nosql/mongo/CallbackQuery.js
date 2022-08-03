@@ -112,7 +112,7 @@ class CallbackQuery extends require("../../../Base") {
    * @function
    * @param {String} name  collection find query object
    *
-   * @description adds a propery name with the value name to an object
+   * @description adds a property name with the value name to an object
    *
    * @return {Object}  the modified/updated object
    *
@@ -145,7 +145,7 @@ class CallbackQuery extends require("../../../Base") {
    *
    * @param {String} collectionName database collection name string
    *
-   * @description Ceates/adds a database collection
+   * @description Creates/adds a database collection
    *
    * @return {EventEmitter}  emits a 'createCollection' (success) or 'createCollection-error' (error)  event
    *
@@ -179,7 +179,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Creates/inserts/adds a document into a collectiion
+   * @description Creates/inserts/adds a document into a collection
    *
    * @return {EventEmitter}  emits a 'insertOne' (success) or 'insertOne-error' (error)  event
    *
@@ -213,7 +213,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Creates/inserts/adds one or more documents into a collectiion
+   * @description Creates/inserts/adds one or more documents into a collection
    *
    * @return {EventEmitter}  emits a 'create' (success) or 'create-error' (error)  event
    *
@@ -249,7 +249,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Array} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Creates/inserts/adds one or more documents into a collectiion
+   * @description Creates/inserts/adds one or more documents into a collection
    *
    * @return {EventEmitter}  emits a 'insertMany' (success) or 'insertMany-error' (error)  event
    *
@@ -288,7 +288,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Array} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Creates/inserts/adds one or more document into a collectiion
+   * @description Creates/inserts/adds one or more document into a collection
    *
    * @return {EventEmitter}  emits a 'createMany' (success) or 'createMany-error' (error)  event
    *
@@ -321,7 +321,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetchs/gets first occurent document in a collectiion
+   * @description Finds/fetches/gets first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'findOne' (success) or 'findOne-error' (error)  event
    *
@@ -355,7 +355,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets first occurent document in a collectiion
+   * @description Finds/fetches/gets first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'first' (success) or 'first-error' (error)  event
    *
@@ -389,7 +389,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets one or more documents from a collectiion
+   * @description Finds/fetches/gets one or more documents from a collection
    *
    * @return {EventEmitter}  emits a 'find' (success) or 'find-error' (error)  event
    *
@@ -423,7 +423,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets all documents statisfying input query from a collection
+   * @description Finds/fetches/gets all documents satisfying input query from a collection
    *
    * @return {EventEmitter}  emits a 'all' (success) or 'all-error' (error)  event
    *
@@ -456,7 +456,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} data query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets all documents statisfying input query from a collection and sorts them
+   * @description Finds/fetches/gets all documents satisfying input query from a collection and sorts them
    *
    * @return {EventEmitter}  emits a 'sort' (success) or 'sort-error' (error)  event
    *
@@ -498,7 +498,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} query query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description deletes/removes first occurent document from a collectiion
+   * @description deletes/removes first occurrent document from a collection
    *
    * @return {EventEmitter}  emits a 'deleteOne' (success) or 'deleteOne-error' (error)  event
    *
@@ -565,7 +565,7 @@ class CallbackQuery extends require("../../../Base") {
    *
    * @description Drops/deletes/removes a collection by name from a database
    *
-   * @return {EventEmitter}  emits a 'dropCollecion' (success) or 'dropCollecion-error' (error)  event
+   * @return {EventEmitter}  emits a 'dropCollection' (success) or 'dropCollection-error' (error)  event
    *
    */
   dropCollectionCallback(collectionName = this.collection, dbName = this.db) {
@@ -601,7 +601,7 @@ class CallbackQuery extends require("../../../Base") {
    *
    * @description Drops/deletes/removes a collection by name from a database
    *
-   * @return {EventEmitter}  emits a 'dropCollecion' (success) or 'dropCollecion-error' (error)  event
+   * @return {EventEmitter}  emits a 'dropCollection' (success) or 'dropCollection-error' (error)  event
    *
    */
   collectionDropCallback(dbName = this.db, collectionName = this.collection) {
@@ -635,7 +635,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} query query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description updates first occurent document in a collection
+   * @description updates first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'updateOne' (success) or 'updateOne-error' (error)  event
    *
@@ -681,7 +681,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} query query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description updates first occurent document in a collection
+   * @description updates first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'update' (success) or 'update-error' (error)  event
    *
@@ -792,7 +792,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {String} foreignField collection two foreign field name string
    * @param {String} as aggregation name
    *
-   * @description aggregates one or more documents in a collectiion
+   * @description aggregates one or more documents in a collection
    *
    * @return {EventEmitter}  emits a 'leftJoin' (success) or 'leftJoin-error' (error)  event
    *
@@ -845,7 +845,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {String} id collection document id
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by id the first occurent document in a collection
+   * @description Finds/fetches/gets by id the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'findById' (success) or 'findById-error' (error)  event
    *
@@ -879,7 +879,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} email database collection document email property value
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by email the first occurent document in a collection
+   * @description Finds/fetches/gets by email the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'findByEmail' (success) or 'findByEmail-error' (error)  event
    *
@@ -913,7 +913,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} email database collection document email property value
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by email the first occurent document in a collection
+   * @description Finds/fetches/gets by email the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'firstByEmail' (success) or 'firstByEmail-error' (error)  event
    *
@@ -947,7 +947,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} username  database collection document username property value
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by username the first occurent document in a collection
+   * @description Finds/fetches/gets by username the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'firstByUsername' (success) or 'firstByUsername-error' (error)  event
    *
@@ -981,7 +981,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} phone database collection document phone property value
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by phone the first occurent document in a collection
+   * @description Finds/fetches/gets by phone the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'firstByPhone' (success) or 'firstByPhone-error' (error)  event
    *
@@ -1015,7 +1015,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} firstname database collection document firstname property value
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by firstname the first occurent document in a collection
+   * @description Finds/fetches/gets by firstname the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'firstByFirstName' (success) or 'firstByFirstName-error' (error)  event
    *
@@ -1049,7 +1049,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {String} lastname database collection document lastname property value
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by lastname the first occurent document in a collection
+   * @description Finds/fetches/gets by lastname the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'firstByLastName' (success) or 'firstByLastName-error' (error)  event
    *
@@ -1083,7 +1083,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {String} fieldname database collection document 'fieldname' property value
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by fieldname the first occurent document in a collection
+   * @description Finds/fetches/gets by fieldname the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'findByFieldName' (success) or 'findByFieldName-error' (error)  event
    *
@@ -1149,7 +1149,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} query query/input document (data) to create/insert
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets first occurent document in a collection
+   * @description Finds/fetches/gets first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'firstByQuery' (success) or 'firstByQuery-error' (error)  event
    *
@@ -1187,7 +1187,7 @@ class CallbackQuery extends require("../../../Base") {
    * @param {Object} username  database collection document username property value
    * @param {String} collectionName database collection name string
    *
-   * @description Finds/fetches/gets by username the first occurent document in a collection
+   * @description Finds/fetches/gets by username the first occurrent document in a collection
    *
    * @return {EventEmitter}  emits a 'firstByUsername' (success) or 'firstByUsername-error' (error)  event
    *

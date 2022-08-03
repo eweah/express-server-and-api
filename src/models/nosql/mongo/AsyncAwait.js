@@ -448,7 +448,7 @@ class AsyncAwait extends require("../../../Base") {
     }
     if (sort && typeof sort !== "object") {
       this.emit("awaitSort-error", { error: "sort query must be an object" });
-      return { error: "sorrt query must be an object" };
+      return { error: "sort query must be an object" };
     }
     if (projection && typeof projection !== "object") {
       this.emit("awaitSort-error", {
@@ -483,7 +483,7 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description deletes/removes first occurence document satisfying the input query in a collection
+   * @description deletes/removes first occurrence document satisfying the input query in a collection
    *
    * @return {Object}  The resulting object of a document deletion/removal from a collection as a result of the query
    *
@@ -664,7 +664,7 @@ class AsyncAwait extends require("../../../Base") {
    *
    * @param {String} collectionName database collection name string
    * @param {String} dbName database name string
-   * @param {Object} options an object respresenting a collection schema
+   * @param {Object} options an object representing a collection schema
    * @param {Object|Function|Stream} client Mongo Client instance
    *
    * @description creates/adds a collection from optional input schema object
@@ -718,7 +718,7 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description updates first occurent document satisfying the input query in a collection
+   * @description updates first occurrent document satisfying the input query in a collection
    *
    * @return {Object}  The resulting object of a document update from a collection as a result of the query
    *
@@ -770,7 +770,7 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description updates first occurent document satisfying the input query in a collection
+   * @description updates first occurrent document satisfying the input query in a collection
    *
    * @return {Object}  The resulting object of a document update from a collection as a result of the query
    *
@@ -884,7 +884,7 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description finds/fetchs/gets all documents satisfying the input query in a collection  and limit the number by input limit
+   * @description finds/fetches/gets all documents satisfying the input query in a collection  and limit the number by input limit
    *
    * @return {Object}  The resulting objects of all documents fetched from a collection as a result of the query
    *
@@ -943,9 +943,9 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description finds/fetches/gets by id the first occurent document satisfying the input query in a collection
+   * @description finds/fetches/gets by id the first occurrent document satisfying the input query in a collection
    *
-   * @return {Object}  The resulting object of first occurent document by id fetched from a collection as a result of the query
+   * @return {Object}  The resulting object of first occurrent document by id fetched from a collection as a result of the query
    *
    */
   async awaitFirstById(
@@ -987,9 +987,9 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description Finds/fetches/gets by email the first occurent document satisfying the input query in a collection
+   * @description Finds/fetches/gets by email the first occurrent document satisfying the input query in a collection
    *
-   * @return {Object}  The resulting object of first occurent document by email fetched from a collection as a result of the query
+   * @return {Object}  The resulting object of first occurrent document by email fetched from a collection as a result of the query
    *
    */
   async awaitFirstByEmail(
@@ -1030,9 +1030,9 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description Finds/fetches/gets by email the first occurent document satisfying the input query in a collection
+   * @description Finds/fetches/gets by email the first occurrent document satisfying the input query in a collection
    *
-   * @return {Object}  The resulting object of first occurent document by email fetched from a collection as a result of the query
+   * @return {Object}  The resulting object of first occurrent document by email fetched from a collection as a result of the query
    *
    */
   async awaitFindByEmail(
@@ -1073,9 +1073,9 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description Finds/fetches/gets by username the first occurent document satisfying the input query in a collection
+   * @description Finds/fetches/gets by username the first occurrent document satisfying the input query in a collection
    *
-   * @return {Object}  The resulting object of first occurent document by username fetched from a collection as a result of the query
+   * @return {Object}  The resulting object of first occurrent document by username fetched from a collection as a result of the query
    *
    */
 
@@ -1117,9 +1117,9 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description Finds/fetches/gets by firstname the first occurent document satisfying the input query in a collection
+   * @description Finds/fetches/gets by firstname the first occurrent document satisfying the input query in a collection
    *
-   * @return {Object}  The resulting object of first occurent document by firstname fetched from a collection as a result of the query
+   * @return {Object}  The resulting object of first occurrent document by firstname fetched from a collection as a result of the query
    *
    */
 
@@ -1161,9 +1161,9 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description Finds/fetchs/gets by lastname the first occurent document satisfying the input query in a collection
+   * @description Finds/fetches/gets by lastname the first occurrent document satisfying the input query in a collection
    *
-   * @return {Object}  The resulting object of first occurent document by lastname fetched from a collection as a result of the query
+   * @return {Object}  The resulting object of first occurrent document by lastname fetched from a collection as a result of the query
    *
    */
 
@@ -1205,9 +1205,9 @@ class AsyncAwait extends require("../../../Base") {
    * @param {String} collectionName database collection name string
    * @param {Object|Function|Stream} client Mongo Client instance
    *
-   * @description Finds/fetches/gets by phone the first occurent document satisfying the input query in a collection
+   * @description Finds/fetches/gets by phone the first occurrent document satisfying the input query in a collection
    *
-   * @return {Object}  The resulting object of first occurent document by phone fetched from a collection as a result of the query
+   * @return {Object}  The resulting object of first occurrent document by phone fetched from a collection as a result of the query
    *
    */
 
