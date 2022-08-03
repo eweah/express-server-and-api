@@ -1,0 +1,43 @@
+{
+    "name": "node-tcp-and-http-server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/ericsonsweah/nodejs-tcp-and-http-server",
+    "author": "Ericson Weah <ericson.weah@ericsonweah.dev>",
+    "license": "MIT",
+    "dependencies": {
+        "@socket.io/admin-ui": "^0.2.0",
+        "@socket.io/cluster-adapter": "^0.1.0",
+        "@socket.io/mongo-adapter": "^0.1.0",
+        "@socket.io/mongo-emitter": "^0.1.0",
+        "@socket.io/redis-adapter": "^7.0.0",
+        "@socket.io/redis-emitter": "^4.1.0",
+        "bcrypt": "^5.0.1",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "ejs": "^3.1.8",
+        "express": "^4.17.1",
+        "farmhash": "^3.2.1",
+        "form-data": "^4.0.0",
+        "ioredis": "^4.28.0",
+        "jest": "^27.0.6",
+        "mailgun.js": "^7.0.2",
+        "mongo": "0.1.0",
+        "mongodb": "4.0.1",
+        "morgan": "^1.10.0",
+        "mysql": "^2.18.1",
+        "nodemon": "^2.0.15",
+        "redis": "^3.1.2",
+        "socket.io": "^4.1.3",
+        "socket.io-client": "^4.1.3",
+        "socket.io-redis": "^6.1.1"
+    },
+    "scripts": {
+        "test": "jest",
+        "start": "nodemon -r esm index.js",
+        "serve": "nodemon index.js --trace-warnings"
+    },
+    "devDependencies": {
+        "@shelf/jest-mongodb": "^2.0.1"
+    }
+}
