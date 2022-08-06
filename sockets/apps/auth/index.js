@@ -1,10 +1,13 @@
 "use strict";
 
+
+const Redis = require("ioredis");
+
 const AuthController = require("../../../app/controllers/tcp/users/AuthController");
 
 const { register, login, logout, status } = new AuthController();
 
-const Redis = require("ioredis");
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +18,14 @@ const Redis = require("ioredis");
 */
 
 module.exports = (io) => {
+
+  // auth namespace
   const AuthNamespace = io.of("/auth");
 
+  // subscription
   const sub = new Redis();
+
+  // publishing
   const pub = new Redis();
 
   const onAuthConnection = (socket) => {

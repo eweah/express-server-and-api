@@ -20,8 +20,8 @@ const { MongoClient } = require("mongodb");
 require("../../../config/Env");
 class Callback extends require("../../../Base") {
   constructor(options = {}) {
-    super();
-    // super({ objectMode: true, encoding: "utf-8", autoDestroy: true });
+    super({ objectMode: true, encoding: "utf-8", autoDestroy: true });
+    
     Object.keys(options).forEach((key) => {
       this[key] = options[key];
     });

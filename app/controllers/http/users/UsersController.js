@@ -17,7 +17,7 @@
  */
 
 const User = require("../../../models/User");
-// const Mail = require('../../../../src/mail/mailgun')
+
 class UsersController extends require("../Controller") {
   constructor(options = {}) {
     super({ objectMode: true, encoding: "utf-8", autoDestroy: true });
@@ -52,6 +52,7 @@ class UsersController extends require("../Controller") {
    */
 
   async index(req, res, next, user = new User) {
+    
     user.all({});
     user.once("all", (users) => res.status(200).send(users) );
     user.once("all-error", (error) => res.status(200).send(error));
@@ -219,6 +220,7 @@ class UsersController extends require("../Controller") {
    *
    */
    async activation(req, res, next, user = new User()) {
+
     user.firstByQuery({verificationToken: req.params.token})
 
     user.once('firstByQuery', foundUser => {

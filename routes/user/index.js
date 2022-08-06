@@ -24,7 +24,7 @@ Route.get("/me", (req, res) => {
 Route.get("/users", index);
 Route.post("/users", store);
 Route.get("/users/:id", show);
-// Route.post('/users/:id', edit)
+Route.get('/users/:id', edit)
 Route.put("/users/:id", update);
 Route.delete("/users/:id", destroy);
 Route.get(`/account/activate/:token`, activation)

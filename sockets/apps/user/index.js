@@ -1,8 +1,11 @@
 "use strict";
+
+const Redis = require("ioredis");
+
 const UsersController = require("../../../app/controllers/tcp/users/UsersController");
 
 const { index, show, edit, update, store, destroy } = new UsersController();
-const Redis = require("ioredis");
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +17,12 @@ const Redis = require("ioredis");
 
 module.exports = (io) => {
   
+  // user namespace
   const UserNamespace = io.of("/users");
 
+  // subscription
   const sub = new Redis();
+  // publishing
   const pub = new Redis();
 
   const onUserConnection = (socket) => {

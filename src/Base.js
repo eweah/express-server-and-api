@@ -146,9 +146,9 @@ class Base extends require("stream").Transform {
   }
 
   addDefault() {
-    if (!createWriteStream) this.createWriteStream = createWriteStream;
-    if (!createReadStream) this.createReadStream = createReadStream;
-    if (!promises) this.promises = promises;
+    if (!this.createWriteStream) this.createWriteStream = createWriteStream;
+    if (!this.createReadStream) this.createReadStream = createReadStream;
+    if (!this.promises) this.promises = promises;
   }
   /**
    * @name autoinvoked
@@ -523,3 +523,29 @@ class Base extends require("stream").Transform {
 }
 
 module.exports = Base;
+
+const base = new Base ({
+  findUsernameAndDelete: () => console.log('find username and delete'),
+  SSI: '123-123-2334',
+  User: class {
+    firstname () {
+      return "User First Name";
+    }
+    lastname () {
+      return "User Last Name"
+    }
+    username () {
+      return "Username"
+    }
+    email (){
+      return "User email"
+    }
+  }
+})
+
+
+base.on('user', console.log)
+base.emit('user', ['me', 'you'])
+
+const writable = base.createWriteStream('users.json', 'utf-8')
+base.getFromIterable({name: 'john doe', email: 'john.doe@email.com', phone: '612.209.232'}).pipe(writable)

@@ -8,6 +8,8 @@
 */
 
 module.exports = (io) => {
+  // user namespace
   require("./user")(io);
+  // auth namespace
   require("./auth")(io);
 };
