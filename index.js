@@ -10,7 +10,7 @@ const {renderFile} = require('ejs')
 
 require("./src/config/Env");
 
-const port = 8000 | process.env.PORT || process.env.SERVER_PORT;
+const port = 8000 || process.env.PORT || process.env.SERVER_PORT;
 
 const num_processes = require("os").cpus().length;
 
@@ -68,10 +68,10 @@ if (cluster.isMaster) {
   app.use(morgan("dev"));
 
   // uncomment if you want to use views
-  // app.use(express.static('public'));
-  // app.engine('html', renderFile);
-  // app.set('view engine', 'html');
-  // app.set('views', path.join(__dirname, './views'));
+  app.use(express.static('public'));
+  app.engine('html', renderFile);
+  app.set('view engine', 'html');
+  app.set('views', path.join(__dirname, './views'));
 
 
   const corsOptions = {
@@ -96,7 +96,9 @@ if (cluster.isMaster) {
   const server = app.listen(0, "localhost");
 
   // Mount TCP Routes (sockets) to main app
-  require("./sockets")(server);
+  const sockets = require('./sockets')
+  sockets(server);
+  // require("./sockets")(server);
 
   // Here you might use Socket.IO middleware for authorization etc.
 

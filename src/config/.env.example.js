@@ -31,6 +31,10 @@ module.exports = () => ({
     JWT_TOKEN_REFRESH_TOKEN_SECRET: 'wescYfxrL0xsWh1Cwn85tggk9QrWPCSnM4xAxg11vYQaQp9EzrazBdV68Wo6nVaq',
     JWT_TOKEN_REFRESH_TOKEN_EXPIRE_TIME: '10m',
 
+
+    VERIFICATION_TOKEN_METHOD: 'sha256',
+    VERIFICATION_TOKEN_SECRET: 'f:SPPemkx0HL_aY}|FQw>Ak1GZ]%lc[_xmv?<oTT6nWf0hR]Pˆ5<ZmHR]0Vxf}aL',
+
     PASSWORD_HASH_SECRET: 'f:SPPemkx0HL_aY}|FQw>Ak1GZ]%lc[_xmv?<oTT6nWf0hR]Pˆ5<ZmHR]0Vxf}aL',
     PASSWORD_HASH_METHOD: 'sha256',
 

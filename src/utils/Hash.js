@@ -42,6 +42,8 @@ class Hash extends require("../Base") {
   }
 
   static VerificationToken (string = 'username email password', randomBytesLength = 64){
+
+   // return process.env;
    return createHmac(process.env.VERIFICATION_TOKEN_METHOD, process.env.VERIFICATION_TOKEN_SECRET)
                .update(string)
                .digest('hex');// + randomBytes(randomBytesLength).toString('hex') ;

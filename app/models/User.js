@@ -41,6 +41,7 @@ class User extends require("../../src/models/nosql/mongo") {
     data.is_super = false;
     data.is_active = false;
     data.activationLink = `${process.env.SERVER_HOST}:${process.env.SERVER_PORT}/account/activate/${data.verificationToken}`;
+    // data.activationLink = `${process.env.SERVER_PORT}/account/activate/${data.verificationToken}`;
     data.verificationTokenExpires = Date.now() + (60 * 60 * 48);
     return data;
    }

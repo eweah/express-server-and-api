@@ -1,7 +1,7 @@
 
     // console.log(user)
     
-    // alll
+    // all
     // user.on("all", (users) => res.status(200).send(users));
     // user.on("all-error", (error) => res.status(200).send(error));
     // user.all({});
@@ -17,7 +17,7 @@
     // user.on("insertOne-error", (error) => res.status(200).send(error));
     // user.insertOne({firstname: 'Florande', lastname: 'Paha', username: 'pahaflorande', email: 'paha.florange@gmail', phone: '612.207.1306'})
 
-        // createe
+        // create
     // user.on("create", (users) => res.status(200).send(users));
     // user.on("create-error", (error) => res.status(200).send(error));
     // user.create('adfasdf');

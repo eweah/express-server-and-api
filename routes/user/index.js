@@ -18,7 +18,7 @@ const connected = (req, res) => res.status(200).send("connected!");
 |
 */
 
-Route.get("/", (req, res) => {
+Route.get("/me", (req, res) => {
     res.send('It works!');
 });
 Route.get("/users", index);

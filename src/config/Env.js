@@ -42,7 +42,7 @@ class Env extends require("../Base") {
    * @return does not return anything
    *
    */
-  async addvariables() {
+  async addVariables() {
     for (let prop in env) {
       if (!process.env[prop]) {
         if (typeof env[prop] === "string") {
@@ -65,7 +65,7 @@ class Env extends require("../Base") {
    */
 
   autoinvoked() {
-    return ["addvariables"];
+    return ["addVariables"];
   }
 }
 

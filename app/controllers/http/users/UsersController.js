@@ -52,17 +52,17 @@ class UsersController extends require("../Controller") {
    */
 
   async index(req, res, next, user = new User) {
-    user.find({});
-    user.once("find", (users) => res.status(200).send(users));
-    user.once("find-error", (error) => res.status(200).send(error));
-
+    user.all({});
+    user.once("all", (users) => res.status(200).send(users) );
+    user.once("all-error", (error) => res.status(200).send(error));
+    
   }
 
 
   async verificationTokenAndUpdate(req, res, user = new User, result){
     if(new Date(result.verificationTokenExpires) < Date.now()){
       const data = user.prepare(req.body);
-      for(let obj of data){
+      for(let obj in data){
         if(result.hasOwnProperty(obj)) {
            if(result[obj] !== data[obj]){
             result[obj] = data[obj]
@@ -122,7 +122,6 @@ class UsersController extends require("../Controller") {
     })
     user.once('firstByEmail-error', error => res.status(200).send(error))
 
- 
   }
 
   /**
@@ -221,17 +220,27 @@ class UsersController extends require("../Controller") {
    */
    async activation(req, res, next, user = new User()) {
     user.firstByQuery({verificationToken: req.params.token})
+
     user.once('firstByQuery', foundUser => {
+      if(JSON.stringify(foundUser) == '{}') return res.status(200).send({error:'Account activation code no longer exists or is invalid or never existed. Please Register!'});
       if(foundUser && foundUser.verificationToken && foundUser.activationLink){
-        if(new Date('2022-06-25T07:27:46.703Z') < Date.now()){
+        if(new Date(foundUser.verificationTokenExpires) < Date.now()){
           return res.status(200).send({error:'Activation link has expired. Please Re-register!'});
          }else{
           foundUser.verificationToken  = '';  
           foundUser.activationLink  = '';  
            user.updateOne({verificationToken: req.params.token}, foundUser)
-           user.once('updateOne', updated => res.status(200).send(updated))
+           const successMessage = {success: 'Your account has been activated! You may now login.'}
+           const errorMessage = {error: 'Account activation failed! Please re-register or contact us.'}
+           user.once('updateOne', updated => {
+            const {modifiedCount, matchedCount} = updated
+            if(modifiedCount  == 1 && matchedCount == 1) return res.status(200).send(successMessage)
+            return res.status(200).send(errorMessage)
+           })
            user.once('updateOne-error', error => res.status(200).send(error))
          }
+      }else if(!foundUser || foundUser.verificationToken  || foundUser.activationLink ){
+        return res.status(200).send({error:'Account activation code not longer exists or never existed. Please Register!'});
       }else{
         return res.status(200).send({error:'Account has already been activated. Please Login!'});
       }

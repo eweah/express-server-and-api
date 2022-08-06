@@ -43,7 +43,8 @@ class Base extends require("stream").Transform {
      * @param {Object} options Options provided to new stream.Readable([options]). By default, Readable.from() will set options.objectMode to true, unless this is explicitly opted out by setting options.objectMode to false.
      * 
      * @description creates readable streams out of iterators.
-
+      01 -70 -05 -64 -32 ///
+      07-
 
      * 
      * @return {Base}
