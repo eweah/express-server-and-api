@@ -31,7 +31,7 @@ Almost all the classes inherit a single NodeJs API class:
 1. clone the repository:
 
  ```javascript
- git clone https://github.com/ericsonsweah/nodejs-tcp-and-http-server.git tcp-and-http-server
+ git clone https://github.com/eweah/nodejs-tcp-and-http-server.git tcp-and-http-server
 ```
 
 or
