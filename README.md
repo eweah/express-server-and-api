@@ -1,7 +1,4 @@
 ## Production Ready TCP and HTTP NodeJs Server
-
-<!-- ### [RAW NodeJs: Routing A Right Way](https://github.com/ericsonsweah/raw_nodejs_routing_a_right_way "Server, API, Routing") -->
-
 A good TCP, Realtime Communication, and HTTP Server. This is a multipurpose server. It can serve one or more more clients. A client can be a web browser, a frontend application or entity such as reactJs app, VueJs app, or a plain old HTML/CSS/Javascript app. A client is not only limited to frontend entities (or apps). A client can also be a backend server such as Laravel application, django Application, another NodeJs server application, etc. 
 
 This may be the basic for a starting point to build a medium to large NodeJs TCP and HTTP server (or API).
