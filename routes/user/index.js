@@ -5,7 +5,7 @@ const UsersController = require("../../app/controllers/http/users/UsersControlle
 
 const { index, show, store, edit, update, destroy, activation } = new UsersController();
 
-const connected = (req, res) => res.status(200).send("connected!");
+const connected = (req, res) => res.status(200).send("server is running and all is good!");
 // const connected = (req, res) => res.render('index.html',{email:'ericson.weah@gmail.com',password:'password'});
 
 // const home = (req, res) => res.render('welcome',{email:'ericson.weah@gmail.com',password:'password'});
@@ -18,9 +18,7 @@ const connected = (req, res) => res.status(200).send("connected!");
 |
 */
 
-Route.get("/me", (req, res) => {
-    res.send('It works!');
-});
+Route.get("/", connected);
 Route.get("/users", index);
 Route.post("/users", store);
 Route.get("/users/:id", show);

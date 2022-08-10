@@ -16,9 +16,10 @@
 
 const { createReadStream, createWriteStream, promises } = require("fs");
 
+
+
 class Base extends require("stream").Transform {
-  
-  constructor(options = {}) {
+    constructor(options = {}) {
     super({ objectMode: true, encoding: "utf-8", autoDestroy: true });
 
     Object.keys(options).forEach((key) => {
@@ -30,7 +31,7 @@ class Base extends require("stream").Transform {
     // auto invoke methods
     this.autoinvoker(Base);
     // add other classes method if methods do not already exists. Argument order matters!
-    // this.methodizer(..classList);
+    this.methodizer( /**..classList */);
     //Set maximum number of listeners to infinity
     this.setMaxListeners(Infinity);
   }
@@ -43,9 +44,6 @@ class Base extends require("stream").Transform {
      * @param {Object} options Options provided to new stream.Readable([options]). By default, Readable.from() will set options.objectMode to true, unless this is explicitly opted out by setting options.objectMode to false.
      * 
      * @description creates readable streams out of iterators.
-      01 -70 -05 -64 -32 ///
-      07-
-
      * 
      * @return {Base}
      * 
@@ -113,7 +111,7 @@ class Base extends require("stream").Transform {
     for (let className of classNamesList) {
       for (let method of Object.getOwnPropertyNames(className.prototype)) {
         if (this[method] === undefined || !this[method]) {
-          if (typeof className.prototype[method] === "function") {
+          if (typeof className.prototype[method] === "function" && className.prototype[method] !== "constructor") {
             this[method] = className.prototype[method];
             // auto bind each method form className class to this
             this[method] = this[method].bind(this);
@@ -137,11 +135,13 @@ class Base extends require("stream").Transform {
 
   autoinvoker(className = {}) {
     for (let method of Object.getOwnPropertyNames(className.prototype)) {
-      this.autoinvoked().forEach((name) => {
-        if (method === name) {
-          this[method]();
-        }
-      });
+      if (typeof this[method] === "function" && method !== "constructor") {
+        this.autoinvoked().forEach((name) => {
+          if (method === name) {
+            this[method]();
+          }
+        });
+      }
     }
   }
 
@@ -524,28 +524,17 @@ class Base extends require("stream").Transform {
 
 module.exports = Base;
 
-const base = new Base ({
-  findUsernameAndDelete: () => console.log('find username and delete'),
-  SSI: '123-123-2334',
-  User: class {
-    firstname () {
-      return "User First Name";
-    }
-    lastname () {
-      return "User Last Name"
-    }
-    username () {
-      return "Username"
-    }
-    email (){
-      return "User email"
-    }
-  }
-})
+// const  base = new Base({account: () => console.log('account'), name: 'John', User: class User{}})
+// base.on('user-has-registered', console.log)
+// base.emit('user-has-registered', {username: 'john', email: 'john@email.com'})
+
+// const writable = base.createWriteStream('users.json')
+// base.getFromIterable({firstname: 'John', lastname: 'Doe'}).pipe(writable)
 
 
-base.on('user', console.log)
-base.emit('user', ['me', 'you'])
 
-const writable = base.createWriteStream('users.json', 'utf-8')
-base.getFromIterable({name: 'john doe', email: 'john.doe@email.com', phone: '612.209.232'}).pipe(writable)
+
+
+
+
+

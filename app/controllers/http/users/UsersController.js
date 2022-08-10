@@ -177,6 +177,7 @@ class UsersController extends require("../Controller") {
    *
    */
   async update(req, res, next, user = new User) {
+    
     user.update({id: req.params.id},{data: req.body})
     user.once('update', user => res.status(200).send(user))
     user.once('update-error', error => res.status(200).send(error))
